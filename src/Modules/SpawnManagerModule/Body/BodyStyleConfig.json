@@ -1,0 +1,46 @@
+{
+    "Harvester": {
+        "MoveType": "slowmove",
+        "CoreParts": [
+            "move",
+            "work"
+        ],
+        "FillPart": "work"
+    },
+    "Upgrader": {
+        "MoveType": "fastmove",
+        "CoreParts": [
+            "carry",
+            "work",
+            "move"
+        ],
+        "FillPart": "carry"
+    },
+    "Hauler": {
+        "MoveType": "fastmove",
+        "CoreParts": [
+            "carry",
+            "work",
+            "move"
+        ],
+        "FillPart": "carry"
+    },
+    "Worker": {
+        "MoveType": "fastmove",
+        "CoreParts": [
+            "carry",
+            "work",
+            "move"
+        ],
+        "FillPart": "carry"
+    },
+    "Energy_Distributor": {
+        "MoveType": "streetOnly",
+        "CoreParts": [
+            "carry",
+            "work",
+            "move"
+        ],
+        "FillPart": "carry"
+    }
+}

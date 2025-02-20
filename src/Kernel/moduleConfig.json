@@ -1,0 +1,16 @@
+{
+    "modules": {
+        "CreepSpawnModule": {
+            "priority": 1
+        },
+        "SpawnManagerModule": {
+            "priority": 2
+        },
+        "TaskCreatorModule": {
+            "priority": 3
+        },
+        "TaskExecuterModule": {
+            "priority": 4
+        }
+    }
+}
