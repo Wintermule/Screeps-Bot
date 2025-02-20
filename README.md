@@ -71,13 +71,6 @@ Each module is designed to be independent and communicates through the message b
 - **Energy Distributors**: Manage energy distribution
 - **Upgraders**: Focus on controller upgrades
 
-## Design Patterns
-
-- Message-based communication between modules
-- Dependency injection for module management
-- Role-based creep specialization
-- Priority-based task assignment
-
 ## Tech Stack
 - TypeScript
 - Screeps Game API
