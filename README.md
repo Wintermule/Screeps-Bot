@@ -26,17 +26,41 @@ A custom AI bot for the game [Screeps](https://screeps.com/) built with TypeScri
 
 ## Technical Implementation
 
-The bot uses a straightforward, maintainable architecture:
+The bot uses a modular, message-based architecture:
 
 ```typescript
-src/
-  ├── kernel.ts          // Core system coordinator
-  ├── modules/           // Feature modules
-  │   ├── colony.ts     // Colony management
-  │   └── spawner.ts    // Creep spawning logic
-  ├── tasks/            // Task definitions
-  └── shared/           // Common utilities
-```
+rc/
+  ├── Kernel/                    // Core system management
+  │   ├── ModuleBase.ts         // Base class for all modules
+  │   ├── ModuleLoader.ts       // Handles module initialization
+  │   ├── IModule.ts            // Module interface definition
+  │   └── kernel.ts             // Main system coordinator
+  ├── Modules/                  // Feature modules
+  │   ├── CreepSpawnModule/     // Creep spawn monitoring
+  │   ├── SpawnManagerModule/   // Spawn queue management
+  │   ├── TaskCreatorModule/    // Task generation
+  │   └── TaskExecuterModule/   // Task execution
+  ├── Tasks/                    // Task management system
+  │   ├── Core/                 // Base task infrastructure
+  │   ├── Construction/         // Building and upgrading tasks
+  │   ├── Logistics/           // Resource movement tasks
+  │   └── Resource/            // Resource gathering tasks
+  ├── Messaging/               // Message bus system
+  │   ├── Core/                // Messaging infrastructure
+  │   │   ├── IHandle.ts       // Message handler interface
+  │   │   ├── IMessage.ts      // Message interface
+  │   │   └── MessageBus.ts    // Central message dispatcher
+  │   └── Messages/            // Concrete message types
+  ├── utils/                   // Utility functions
+  ├── types/                   // TypeScript declarations
+  ├── Colony.ts                // Colony management
+  └── EmpireRepository.ts      // Global state management
+
+Each module is designed to be independent and communicates through the message bus system. The architecture emphasizes:
+- Message-driven design
+- Modular components
+- Clear separation of concerns
+- Standardized interfaces
 
 ## Creep Roles
 
