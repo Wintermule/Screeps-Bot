@@ -29,7 +29,7 @@ A custom AI bot for the game [Screeps](https://screeps.com/) built with TypeScri
 The bot uses a modular, message-based architecture:
 
 ```typescript
-rc/
+src/
   ├── Kernel/                    // Core system management
   │   ├── ModuleBase.ts         // Base class for all modules
   │   ├── ModuleLoader.ts       // Handles module initialization
@@ -55,6 +55,7 @@ rc/
   ├── types/                   // TypeScript declarations
   ├── Colony.ts                // Colony management
   └── EmpireRepository.ts      // Global state management
+```
 
 Each module is designed to be independent and communicates through the message bus system. The architecture emphasizes:
 - Message-driven design
